@@ -8,23 +8,24 @@
   <head>
     <title>Getting Started Extension's Popup</title>
 
-
     <!--
       - JavaScript and HTML must be in separate files: see our Content Security
       - Policy documentation[1] for details and explanation.
       -
       - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
      -->
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="popup.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="d3.layout.cloud.js"></script>
+    <script src="visual.js"></script>
 
-</script>
   </head>
   <body>
-    <h1>'WOOOHOOO'</h1>
-    <div id='links'></div>
     <div id="status"></div>
     <img id="image-result" hidden>
+    <div id="message">Injecting script...</div>
+
   </body>
 </html>
-
