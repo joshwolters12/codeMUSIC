@@ -1,11 +1,26 @@
+*{
+  font-family:  Helvetica, Arial, sans-serif;
+}
+
 body {
-  font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+  position: relative;
   font-size: 100%;
-}
-#status {
-  /* avoid an excessively wide status text */
-  white-space: pre;
-  text-overflow: ellipsis;
+  width:auto;
+  height:auto;
+  margin:auto;
+  background-color: #355C7D;
   overflow: hidden;
-  max-width: 400px;
+  border: solid white 1px;
 }
+
+.words {
+  margin:10px;
+  border: solid lightgray 0.5px;
+  color: white;
+  text-align:center;
+  border-radius: 5px;
+  box-shadow: 1px 2px 1px rgb(80,80,80);
+  text-shadow: 1px 1px gray;
+  float:left;
+}
+
