@@ -10,21 +10,20 @@ function onWindowLoad() {
             stringText = request.source;
         }
         
-        stringArray = stringText.split(' ')
-        let outputArray = [{text: '<li>', weight: 9}, {text: '<p>', weight: 12}, {text: '<body>', weight: 4} ];
-        console.log(outputArray)
-        // stringArray.forEach((e)=>{
-        //   let obj = {
-        //     text: e,
-        //     weight: Math.random()*15
-        //   }
-        //   outputArray.push(obj);
-        // })
+        // stringArray = stringText.split(' ')
+        wordsArray = ["</p>", "/body", "</h1>", "</li>", "</ul>", "</script>"]
+        counterObj = {};
 
-        $(function() {
-        // When DOM is ready, select the container element and call the jQCloud method, passing the array of words as the first argument.
-          $("#message").jQCloud(outputArray);
-        });
+        wordsArray.forEach((e)=>{
+            let count = stringText.split(e).length;
+            counterObj[e] = count;
+            console.log(counterObj[e])
+        })
+        
+        message.innerText = counterObj["</p>"]
+        console.log(counterObj["</p>"])
+  
+
 
     });
 
