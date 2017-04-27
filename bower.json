@@ -1,0 +1,10 @@
+{
+  "name": "bower.json",
+  "homepage": "https://github.com/joshwolters12/codeMUSIC",
+  "description": "bower",
+  "main": "bower",
+  "keywords": [
+    "bower"
+  ],
+  "license": "MIT"
+}

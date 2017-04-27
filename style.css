@@ -11,9 +11,11 @@ body {
   background-color: #355C7D;
   overflow: hidden;
   border: solid white 1px;
+  padding: auto;
 }
 
 .words {
+  padding: auto;
   margin:10px;
   border: solid lightgray 0.5px;
   color: white;

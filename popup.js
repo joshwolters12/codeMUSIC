@@ -22,11 +22,15 @@ function onWindowLoad() {
             totalCount += count;
         })
 
+        cloudOutput = [];
         //add div elements to the popup page
         for (key in counterObj){
           let word = $('<div>');
           word.attr('class','words')
           word.attr('id',key)
+
+          
+
           heightVal = (counterObj[key] < 5) ? 25 :
                         (counterObj[key] < 10) ? 50 :
                           (counterObj[key] < 25) ? 75 :
@@ -34,6 +38,8 @@ function onWindowLoad() {
           widthVal = heightVal *2.8;
           fontSize = 0.4 * heightVal;
           lineHeight = heightVal;
+
+          cloudOutput.push({text: key, weight: heightVal});
           word.css({height: heightVal, width: widthVal, "font-size": fontSize, "line-height": lineHeight+'px'})
 
           backgroundColor = (counterObj[key] < 5) ?  '#FFD1BF' :
@@ -43,8 +49,12 @@ function onWindowLoad() {
 
 
           word.css({"background-color": backgroundColor})
-          word.text(key) // = key + counterObj[key];
+          word.text(key)
+          
+          $('#message').jQCloud(cloudOutput);
+
           $('body').prepend(word)
+          
         }
 
     });
@@ -58,8 +68,8 @@ function onWindowLoad() {
     }
   });
 
-
-      
 }
+
+
 
 window.onload = onWindowLoad;
